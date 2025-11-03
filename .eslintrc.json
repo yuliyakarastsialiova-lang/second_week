@@ -1,0 +1,46 @@
+{
+  "env": { 
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module" 
+  },
+  "plugins": [
+    "react",
+    "jest",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error", 
+    "react/prop-types": 0 
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.spec.js",
+        "**/*.spec.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "globals": {
+    "test": "readonly",
+    "expect": "readonly",
+    "describe": "readonly",
+    "it": "readonly"
+  }
+}
